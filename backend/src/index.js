@@ -1,6 +1,6 @@
 const express = require("express");  // traz o módulo express para o arquivo
 
-const cors = require('cors');
+const cors = require('cors'); // proteção/permissão para acesso
 
 const routes = require('./routes')  // importa a função de rotas
 
@@ -34,22 +34,9 @@ app.use(routes); // habilita o uso da função de rotas
  // retorna para http://localhost:3333/users/1
  // params como id:1
 
-// #### BANCOS DE DADOS
-// SQL: MySQL, SQLite, PostGree, Oracle, Microsoft SQL Server
-// NoSql: MongoDB, CouchDB, etc
-
-// Driver (Pacote oficial) - Query fica : SELECT * FROM users
-// Query Builder (KNEX.JS): table('users').select('*').where()
-
-// #### Banco de dados
-
-
-
 //  app.post("/users", (request, response)=>{
-
 //  //passar o corpo da requisição com o POST pelo body
 //  const body = request.body;
-
 
 //  // passar recursos pela query usando o argumento REQUEST para 
 //  // passar as solicitações, inclusive via barra de endereço
@@ -66,5 +53,15 @@ app.use(routes); // habilita o uso da função de rotas
 //   aluno: "Daniel Nobre"
 // })
 // });
+
+
+ // #### BANCOS DE DADOS
+// SQL: MySQL, SQLite, PostGree, Oracle, Microsoft SQL Server
+// NoSql: MongoDB, CouchDB, etc
+
+// Driver (Pacote oficial) - Query fica : SELECT * FROM users
+// Query Builder (KNEX.JS): table('users').select('*').where()
+
+// #### Banco de dados
 
 app.listen(3333);
